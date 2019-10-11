@@ -2073,29 +2073,17 @@ the abdominal cavity
 <p>O algoritmo <em>Random Forest</em> utiliza uma estrutura de uma estrutra de árvore selecionando os atributos que mais geram ganho de informação sobre as classes a serem preditas. Nesse exemplo tivemos 1000 árvores e uma acurácia de 100%. Durante o processo foi feito o <em>tuning</em> dos parametros de quantidade de árvores e <em>splits</em> utilizando a bibiliote <em><strong>caret</strong></em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDjpLzjuLFyYW5kb21Gb3Jlc3TjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuM3JhbmRvbUZvcmVzdCA0LjYtMTRcblR5cGUgcmZOZXdzKCkgdG8gc2VlIG5ldyBmZWF0dXJlcy9jaGFuZ2VzL2J1ZyBmaXhlcy5cbnBhY2thZ2Ug46S847ixY2FyZXTjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuM0NhcnJlZ2FuZG8gcGFjb3RlcyBleGlnaWRvczogbGF0dGljZVxuQ2FycmVnYW5kbyBwYWNvdGVzIGV4aWdpZG9zOiBnZ3Bsb3QyXG5wYWNrYWdlIOOkvOO4sWdncGxvdDLjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuM1xuQXR0YWNoaW5nIHBhY2thZ2U6IOOkvOO4sWdncGxvdDLjpLzjuLJcblxuVGhlIGZvbGxvd2luZyBvYmplY3QgaXMgbWFza2VkIGZyb20g46S847ixcGFja2FnZTpyYW5kb21Gb3Jlc3TjpLzjuLI6XG5cbiAgICBtYXJnaW5cbiJ9 -->
-<pre><code>package 㤼㸱randomForest㤼㸲 was built under R version 3.5.3randomForest 4.6-14
-Type rfNews() to see new features/changes/bug fixes.
-package 㤼㸱caret㤼㸲 was built under R version 3.5.3Carregando pacotes exigidos: lattice
-Carregando pacotes exigidos: ggplot2
-package 㤼㸱ggplot2㤼㸲 was built under R version 3.5.3
-Attaching package: 㤼㸱ggplot2㤼㸲
-
-The following object is masked from 㤼㸱package:randomForest㤼㸲:
-
-    margin</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICBkaWVkICAgICAgbGl2ZWQgTWVhbkRlY3JlYXNlQWNjdXJhY3kgTWVhbkRlY3JlYXNlR2luaVxuc2l0ZV9sZXNpb24gICAgICAgICAgMzMuNjU2NTkxICA4LjgxMDAzNjUgICAgICAgICAgICAzMi4zNjE3NjEgICAgICAgIDE5LjYyNjcyMVxudHlwZV9sZXNpb24gICAgICAgICAgMTcuOTU3MjAyIDMyLjc3NjY2MzYgICAgICAgICAgICAzOC42OTcyNzMgICAgICAgIDMyLjY4NDQwMVxuc3BlY2lmaWNfbGVzaW9uICAgICAgMTMuNDY0MzEwIDI5LjEwMjc4MDIgICAgICAgICAgICAzNS44MjAyODUgICAgICAgIDE4Ljc5MTAyNVxucGFja2VkX2NlbGxfdm9sdW1lICAgMTAuMzgwNjExIDM1Ljk2OTQ0NzYgICAgICAgICAgICAzNC4yMzQwOTMgICAgICAgIDE3LjczMjY2MFxucGFpbiAgICAgICAgICAgICAgICAgIDkuMzkzNDAwIDIwLjU2OTg3MzkgICAgICAgICAgICAyMC40MzAxMzMgICAgICAgIDEzLjA1ODUyNFxubXVjb3VzX21lbWJyYW5lICAgICAgIDUuNjM5NDQ5ICA3LjQ0MTk0NTQgICAgICAgICAgICAgOS4yMzcyNTggICAgICAgIDExLjIwNzU4MFxudGVtcF9vZl9leHRyZW1pdGllcyAgMTcuMTcxNTEzIC0wLjYxMjQzODEgICAgICAgICAgICAxMy4xODU5OTEgICAgICAgICA4LjUyOTY2MVxuYWJkb21pbmFsX2Rpc3RlbnRpb24gIDkuMzM1NjEyIC0wLjIzMzQzMTcgICAgICAgICAgICAgNy4wMTU4OTMgICAgICAgICA2LjI4NDA1NlxucHVsc2UgICAgICAgICAgICAgICAgMjEuMjE1MjIzIDExLjgwMjA0NDUgICAgICAgICAgICAyMy45NTIwMDYgICAgICAgIDE1LjYwMjY5MlxuWzFdIDEwMFxuICAgICAgICAgICAgICAgICBcbnByZWRpY3Rpb25zRm9yZXN0IGRpZWQgbGl2ZWRcbiAgICAgICAgICAgIGRpZWQgICAgMzYgICAgIDBcbiAgICAgICAgICAgIGxpdmVkICAgIDAgICAgNTNcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgICAgICAgICAgICBkaWVkICAgICAgbGl2ZWQgTWVhbkRlY3JlYXNlQWNjdXJhY3kgTWVhbkRlY3JlYXNlR2luaVxuc2l0ZV9sZXNpb24gICAgICAgICAgMzQuMTg1MDIzIDEyLjk0ODUxMjQgICAgICAgICAgICAzNS4yOTI5MTggICAgICAgIDE5LjM0ODQwNlxudHlwZV9sZXNpb24gICAgICAgICAgMTkuNjE5MTg5IDM0LjQ5MTMyNTYgICAgICAgICAgICA0MC43NTAyNzQgICAgICAgIDMxLjkzOTc0OVxuc3BlY2lmaWNfbGVzaW9uICAgICAgMTUuMjgyMjQ4IDI5LjMyMzY2ODggICAgICAgICAgICAzNi4wOTg3NTAgICAgICAgIDE5LjQwMzc5MVxucGFja2VkX2NlbGxfdm9sdW1lICAgMTMuODE2OTg4IDM2LjEzNDU2NTggICAgICAgICAgICAzNi4zMjg5MDcgICAgICAgIDE4LjE4MzczOFxucGFpbiAgICAgICAgICAgICAgICAgMTEuNzQyNjk4IDE4LjQ1OTYyOTIgICAgICAgICAgICAyMC44ODY2NDAgICAgICAgIDEzLjEwMDI1OVxubXVjb3VzX21lbWJyYW5lICAgICAgIDcuNDMzMDM5ICA2LjM4ODE3NjIgICAgICAgICAgICAgOS44OTI0NjQgICAgICAgIDExLjE5MjEyNVxudGVtcF9vZl9leHRyZW1pdGllcyAgMTguMjAxMTQxICAwLjc2Mjk5MDYgICAgICAgICAgICAxNS4wMzYwMjMgICAgICAgICA4LjU1ODcxNVxuYWJkb21pbmFsX2Rpc3RlbnRpb24gMTIuNjY4MzMyICAxLjMyMDY1MDQgICAgICAgICAgICAxMC43NDgwMTMgICAgICAgICA2LjI1MzQwMlxucHVsc2UgICAgICAgICAgICAgICAgMjEuMzAwNjQzIDExLjAzMDgzNTIgICAgICAgICAgICAyMy44Nzc3MjIgICAgICAgIDE1LjUzNjU5MFxuWzFdIDEwMFxuICAgICAgICAgICAgICAgICBcbnByZWRpY3Rpb25zRm9yZXN0IGRpZWQgbGl2ZWRcbiAgICAgICAgICAgIGRpZWQgICAgMzYgICAgIDBcbiAgICAgICAgICAgIGxpdmVkICAgIDAgICAgNTNcbiJ9 -->
 <pre><code>                          died      lived MeanDecreaseAccuracy MeanDecreaseGini
-site_lesion          33.656591  8.8100365            32.361761        19.626721
-type_lesion          17.957202 32.7766636            38.697273        32.684401
-specific_lesion      13.464310 29.1027802            35.820285        18.791025
-packed_cell_volume   10.380611 35.9694476            34.234093        17.732660
-pain                  9.393400 20.5698739            20.430133        13.058524
-mucous_membrane       5.639449  7.4419454             9.237258        11.207580
-temp_of_extremities  17.171513 -0.6124381            13.185991         8.529661
-abdominal_distention  9.335612 -0.2334317             7.015893         6.284056
-pulse                21.215223 11.8020445            23.952006        15.602692
+site_lesion          34.185023 12.9485124            35.292918        19.348406
+type_lesion          19.619189 34.4913256            40.750274        31.939749
+specific_lesion      15.282248 29.3236688            36.098750        19.403791
+packed_cell_volume   13.816988 36.1345658            36.328907        18.183738
+pain                 11.742698 18.4596292            20.886640        13.100259
+mucous_membrane       7.433039  6.3881762             9.892464        11.192125
+temp_of_extremities  18.201141  0.7629906            15.036023         8.558715
+abdominal_distention 12.668332  1.3206504            10.748013         6.253402
+pulse                21.300643 11.0308352            23.877722        15.536590
 [1] 100
                  
 predictionsForest died lived
@@ -2110,22 +2098,6 @@ predictionsForest died lived
 <p>Para o algoritmo KNN, a classificação é uma função que mede a distancia do ponto a ser avalidado em relação aos pontos do conjuto de treino. Caso a distancia seja menor para alguma classe, escolhemos essa classe como a resposta da classificação. No exemplo, o conjunto de dados foi discretizados através de duas técnicas chamadas <em>dummy code</em> e <em>ordinal code</em>, também ativamos a opção de normalização de dados com um bom resultado na acurácia, 89%. Também foi alterada a quantidade <em>k</em> achando o valor ótimo de 3 vizinhos.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDjpLzjuLFETXdS46S847iyIHdhcyBidWlsdCB1bmRlciBSIHZlcnNpb24gMy41LjNDYXJyZWdhbmRvIHBhY290ZXMgZXhpZ2lkb3M6IGdyaWRcbnBhY2thZ2Ug46S847ixZmFzdER1bW1pZXPjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuM3BhY2thZ2Ug46S847ixYW5jaG9yc+OkvOO4siB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNS4zQ2FycmVnYW5kbyBwYWNvdGVzIGV4aWdpZG9zOiByZ2Vub3VkXG5wYWNrYWdlIOOkvOO4sXJnZW5vdWTjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuMyMjICByZ2Vub3VkIChWZXJzaW9uIDUuOC0zLjAsIEJ1aWxkIERhdGU6IDIwMTktMDEtMjIpXG4jIyAgU2VlIGh0dHA6Ly9zZWtob24uYmVya2VsZXkuZWR1L3JnZW5vdWQgZm9yIGFkZGl0aW9uYWwgZG9jdW1lbnRhdGlvbi5cbiMjICBQbGVhc2UgY2l0ZSBzb2Z0d2FyZSBhczpcbiMjICAgV2FsdGVyIE1lYmFuZSwgSnIuIGFuZCBKYXNqZWV0IFMuIFNla2hvbi4gMjAxMS5cbiMjICAgYGBHZW5ldGljIE9wdGltaXphdGlvbiBVc2luZyBEZXJpdmF0aXZlczogVGhlIHJnZW5vdWQgcGFja2FnZSBmb3IgUi4nJ1xuIyMgICBKb3VybmFsIG9mIFN0YXRpc3RpY2FsIFNvZnR3YXJlLCA0MigxMSk6IDEtMjYuIFxuIyNcblxuQ2FycmVnYW5kbyBwYWNvdGVzIGV4aWdpZG9zOiBNQVNTXG5wYWNrYWdlIOOkvOO4sU1BU1PjpLzjuLIgd2FzIGJ1aWx0IHVuZGVyIFIgdmVyc2lvbiAzLjUuM1xuIyMgIGFuY2hvcnMgKFZlcnNpb24gMy4wLTgsIEJ1aWxkIERhdGU6IDIwMTQtMDItMjQpXG4jIyAgU2VlIGh0dHA6Ly93YW5kLnN0YW5mb3JkLmVkdS9hbmNob3JzIGZvciBhZGRpdGlvbmFsIGRvY3VtZW50YXRpb24gYW5kIHN1cHBvcnQuXG4ifQ== -->
-<pre><code>package 㤼㸱DMwR㤼㸲 was built under R version 3.5.3Carregando pacotes exigidos: grid
-package 㤼㸱fastDummies㤼㸲 was built under R version 3.5.3package 㤼㸱anchors㤼㸲 was built under R version 3.5.3Carregando pacotes exigidos: rgenoud
-package 㤼㸱rgenoud㤼㸲 was built under R version 3.5.3##  rgenoud (Version 5.8-3.0, Build Date: 2019-01-22)
-##  See http://sekhon.berkeley.edu/rgenoud for additional documentation.
-##  Please cite software as:
-##   Walter Mebane, Jr. and Jasjeet S. Sekhon. 2011.
-##   ``Genetic Optimization Using Derivatives: The rgenoud package for R.''
-##   Journal of Statistical Software, 42(11): 1-26. 
-##
-
-Carregando pacotes exigidos: MASS
-package 㤼㸱MASS㤼㸲 was built under R version 3.5.3
-##  anchors (Version 3.0-8, Build Date: 2014-02-24)
-##  See http://wand.stanford.edu/anchors for additional documentation and support.</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDg5Ljg4NzY0XG4gICAgICAgICBcbktOTl9tb2RlbCBkaWVkIGxpdmVkXG4gICAgZGllZCAgICAyOSAgICAgMlxuICAgIGxpdmVkICAgIDcgICAgNTFcbiJ9 -->
 <pre><code>[1] 89.88764
          
@@ -2141,9 +2113,6 @@ KNN_model died lived
 <p>O algoritmo <em>SVM</em> é uma abordagem que separa os dados utlizando um hiperplano em R<sup>n</sup>. Também utiliza-se um núcleo, que nada mais é que uma transformação linear entre dois espaços, esse núcleo é essencial pois introduz a não linearidade no modelo, aumentando a capacidade de abstração. No exemplo foi utilizado o núcleo polinomial ao invés do radial, aumentando a acurácia de 93% para 96%.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoicGFja2FnZSDjpLzjuLFlMTA3MeOkvOO4siB3YXMgYnVpbHQgdW5kZXIgUiB2ZXJzaW9uIDMuNS4zXG4ifQ== -->
-<pre><code>package 㤼㸱e1071㤼㸲 was built under R version 3.5.3</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDk2LjYyOTIxXG4gICAgICAgICAgICAgIFxucHJlZGljdGlvbnNTVk0gZGllZCBsaXZlZFxuICAgICAgICAgZGllZCAgICAzMyAgICAgMFxuICAgICAgICAgbGl2ZWQgICAgMyAgICA1M1xuIn0= -->
 <pre><code>[1] 96.62921
               
