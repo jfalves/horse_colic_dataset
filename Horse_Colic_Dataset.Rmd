@@ -12,6 +12,8 @@ Este trabalho tem como objetivo analisar alguns algoritmos de _data mining_ a fi
 
 O _dataset_ contém dados como idade, temperatura, respiração, contagem de proteínas, entre outras informações de atendimentos veterinários onde há 3 possíveis resultados. O cavalo pode ter **sobrevivido** ao procedimento, pode ter sido proposto a **eutanasia** ou ter ocorrido o **falecimento**. Nesse exemplo iremos inferir a partir dos parametros de atendimento a classe em que o cavalo se insere. 
 
+[Repositório](https://github.com/jfalves/horse_colic_dataset) com o código do projeto.
+
 ***
 
 ### Análise inicial
